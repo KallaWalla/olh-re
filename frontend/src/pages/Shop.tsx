@@ -18,8 +18,8 @@ export default function Shop() {
     <div className="mx-auto max-w-6xl px-5 py-14">
       <h1 className="text-6xl leading-none md:text-7xl">Shop</h1>
       <p className="mt-4 max-w-md text-lg">Alles om olievlekken duurzaam op te kuisen. Gratis verzending vanaf € 30.</p>
-      <ToggleGroup type="single" value={filter} onValueChange={(v) => v && setFilter(v)} variant="outline" className="mt-8 bg-white/50">
-        {filters.map(([v, l]) => <ToggleGroupItem key={v} value={v} className="px-4 data-[state=on]:bg-inkt data-[state=on]:text-boter">{l}</ToggleGroupItem>)}
+      <ToggleGroup value={[filter]} onValueChange={(v) => v[0] && setFilter(v[0])} variant="outline" className="mt-8 bg-white/50">
+        {filters.map(([v, l]) => <ToggleGroupItem key={v} value={v} className="px-4 data-pressed:bg-inkt data-pressed:text-boter">{l}</ToggleGroupItem>)}
       </ToggleGroup>
       <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
         {shown.map((p) => (

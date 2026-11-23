@@ -32,8 +32,12 @@ export default function Home() {
             <img src="/wordmark.png" alt="Olhère, organic oil sponge" className="w-full max-w-xl" />
             <p className="mt-8 max-w-md text-xl leading-snug">Haar van de kapper wordt een spons voor je olievlek. Duurzaam, lokaal en volledig circulair.</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg"><Link to="/shop">Naar de shop</Link></Button>
-              <Button asChild size="lg" variant="outline"><Link to="/#verhaal">Ons verhaal</Link></Button>
+              <Button size="lg" nativeButton={false} render={<Link to="/shop" />}>
+                Naar de shop
+              </Button>
+              <Button size="lg" variant="outline" nativeButton={false} render={<Link to="/#verhaal" />}>
+                Ons verhaal
+              </Button>
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-sm">
@@ -110,7 +114,7 @@ export default function Home() {
       <section id="vragen" className="scroll-mt-16 py-20">
         <div className="mx-auto max-w-3xl px-5">
           <h2 className="text-5xl leading-none md:text-6xl">Veelgestelde vragen</h2>
-          <Accordion type="single" collapsible className="mt-8 rounded-2xl bg-white px-6">
+          <Accordion className="mt-8 rounded-2xl bg-white px-6">
             {faq.map(([q, a]) => (
               <AccordionItem key={q} value={q}>
                 <AccordionTrigger className="text-left text-lg">{q}</AccordionTrigger>

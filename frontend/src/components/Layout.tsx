@@ -47,8 +47,8 @@ function CartSheet() {
           <SheetFooter className="border-t">
             <div className="flex justify-between text-lg"><span>Subtotaal</span><strong>{eur(subtotal)}</strong></div>
             <p className="text-sm text-muted-foreground">Verzending bereken je bij het afrekenen.</p>
-            <Button asChild size="lg" onClick={() => setOpen(false)}>
-              <Link to="/afrekenen">Afrekenen</Link>
+            <Button size="lg" variant="outline" onClick={() => setOpen(false)} nativeButton={false} render={<Link to="/afrekenen" />}>
+              Afrekenen
             </Button>
           </SheetFooter>
         )}

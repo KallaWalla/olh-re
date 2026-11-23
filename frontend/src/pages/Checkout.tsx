@@ -31,7 +31,9 @@ export default function Checkout() {
         <img src="/mascot.png" alt="" className="mx-auto h-48" />
         <h1 className="mt-6 text-6xl leading-none">Bedankt voor je bestelling</h1>
         <p className="mt-4 text-lg">Ordernummer <strong>{order}</strong>. We sturen een bevestiging per e-mail. (Demo: er is niets echt besteld.)</p>
-        <Button asChild size="lg" className="mt-8"><Link to="/shop">Verder winkelen</Link></Button>
+        <Button size="lg" variant="outline" className="mt-8" nativeButton={false} render={<Link to="/shop" />}>
+          Verder winkelen
+        </Button>
       </div>
     )
 
@@ -39,7 +41,9 @@ export default function Checkout() {
     return (
       <div className="mx-auto max-w-xl px-5 py-24 text-center">
         <h1 className="text-6xl leading-none">Je mandje is leeg</h1>
-        <Button asChild size="lg" className="mt-8"><Link to="/shop">Naar de shop</Link></Button>
+        <Button size="lg" variant="outline" className="mt-8" nativeButton={false} render={<Link to="/shop" />}>
+          Naar de shop
+        </Button>
       </div>
     )
 
