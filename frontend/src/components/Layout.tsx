@@ -20,8 +20,8 @@ function CartSheet() {
         </SheetHeader>
         <div className="flex-1 space-y-4 overflow-y-auto px-4">
           {lines.length === 0 && (
-            <Button asChild onClick={() => setOpen(false)}>
-              <Link to="/shop">Bekijk de shop</Link>
+            <Button onClick={() => setOpen(false)} nativeButton={false} render={<Link to="/shop" />}>
+              Bekijk de shop
             </Button>
           )}
           {lines.map((l) => {

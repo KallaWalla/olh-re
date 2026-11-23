@@ -94,7 +94,9 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-5">
           <div className="flex items-end justify-between gap-4">
             <h2 className="text-5xl leading-none md:text-6xl">Uit de shop</h2>
-            <Button asChild variant="outline"><Link to="/shop">Alle producten</Link></Button>
+            <Button variant="outline" nativeButton={false} render={<Link to="/shop" />}>
+              Alle producten
+            </Button>
           </div>
           <div className="mt-10 grid gap-8 sm:grid-cols-3">
             {featured.map((p) => (
