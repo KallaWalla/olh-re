@@ -6,9 +6,9 @@ import { useCart } from "@/context/cart"
 import ProductArt from "@/components/ProductArt"
 
 const steps = [
-  ["Inzamelen", "Vlaamse kappers bewaren knipsels in plaats van ze te verbranden. Wij halen ze lokaal op."],
+  ["Inzamelen", "Vlaamse kappers bewaren knipsels in plaats van ze weg te gooien. Wij halen ze lokaal op."],
   ["Spons maken", "Menselijk haar heeft de ideale viltstructuur en neemt tot 8 liter olie op per kilo."],
-  ["Gebruiken", "Eén pak bevat genoeg sponzen voor keuken, garage en huishouden."],
+  ["Gebruiken", "Eén pak bevat genoeg sponzen voor keuken, garage of huishouden."],
   ["Terugbrengen", "Verzadigde sponzen en matten gaan in de collection bins bij onze winkelpartners."],
   ["Zuiveren", "In ons zuiveringscentrum halen we de olie eruit met een milieuvriendelijk solvent. De olie gaat naar herraffinage."],
   ["Tweede leven", "Schone matten gaan opnieuw aan het werk. Versleten haar wordt compost voor lokale boeren of een Olhère FireBlock."],
@@ -55,7 +55,7 @@ export default function Home() {
           <div>
             <h2 className="text-5xl leading-none md:text-6xl">Wat we weggooien, kan nog veel opnemen</h2>
             <p className="mt-6 max-w-prose text-lg leading-relaxed">Bij de kapper wordt al het haar weggegooid en verbrand. Olhère geeft dat haar een tweede bestemming: sponzen en matten die olievlekken efficiënt opkuisen.</p>
-            <p className="mt-4 max-w-prose text-lg leading-relaxed">Onze missie is dat olievlekken voor de gewone mens geen probleem meer zijn. Later richten we ons op waterzuiveringsinstallaties, in samenwerking met de Universiteit Gent.</p>
+            <p className="mt-4 max-w-prose text-lg leading-relaxed">Onze missie is om haarafval van kappers circulair te verwerken en zo milieuvervuiling door olie en huishoudelijke oliespills op te ruimen.</p>
           </div>
         </div>
       </section>
@@ -80,7 +80,7 @@ export default function Home() {
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl bg-white p-8">
               <h3 className="text-3xl">Jaar 1</h3>
-              <ul className="mt-4 list-disc space-y-2 pl-5"><li>30 Vlaamse kappers sluiten aan</li><li>Collection bins bij retailpartners</li><li>Eigen zuiveringscentrum in gebruik</li><li>Schapruimte bij 2 winkelketens</li></ul>
+              <ul className="mt-4 list-disc space-y-2 pl-5"><li>30 Vlaamse kappers sluiten aan</li><li>Collection bins bij retailpartners</li><li>Schapruimte bij 2 winkelketens</li></ul>
             </div>
             <div className="rounded-2xl bg-inkt p-8 text-white">
               <h3 className="text-3xl text-boter">Jaar 2</h3>
