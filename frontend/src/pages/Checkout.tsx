@@ -31,7 +31,7 @@ export default function Checkout() {
         <img src="/mascot.png" alt="" className="mx-auto h-48" />
         <h1 className="mt-6 text-6xl leading-none">Bedankt voor je bestelling</h1>
         <p className="mt-4 text-lg">Ordernummer <strong>{order}</strong>. We sturen een bevestiging per e-mail. (Demo: er is niets echt besteld.)</p>
-        <Button size="lg" variant="outline" className="mt-8" nativeButton={false} render={<Link to="/shop" />}>
+        <Button size="lg" className="mt-8" nativeButton={false} render={<Link to="/" />}>
           Verder winkelen
         </Button>
       </div>
@@ -41,7 +41,7 @@ export default function Checkout() {
     return (
       <div className="mx-auto max-w-xl px-5 py-24 text-center">
         <h1 className="text-6xl leading-none">Je mandje is leeg</h1>
-        <Button size="lg" variant="outline" className="mt-8" nativeButton={false} render={<Link to="/shop" />}>
+        <Button size="lg" className="mt-8" nativeButton={false} render={<Link to="/shop" />}>
           Naar de shop
         </Button>
       </div>
@@ -62,7 +62,7 @@ export default function Checkout() {
         <section className="space-y-4">
           <h2 className="text-3xl">Levering</h2>
           <RadioGroup value={delivery} onValueChange={setDelivery} className="gap-3">
-            {[["thuis", "Thuislevering", subtotal >= 30 ? "Gratis" : eur(4.95)], ["afhalen", "Afhalen bij een partnerkapper in Gent", "Gratis"]].map(([v, l, p]) => (
+            {[["thuis", "Thuislevering", subtotal >= 30 ? "Gratis" : eur(4.95)], ["afhalen", "Afhalen in Gent", "Gratis"]].map(([v, l, p]) => (
               <Label key={v} htmlFor={v} className="flex cursor-pointer items-center gap-3 rounded-lg bg-white p-4 has-[[data-state=checked]]:ring-2 has-[[data-state=checked]]:ring-inkt">
                 <RadioGroupItem id={v} value={v} /><span className="flex-1">{l}</span><span>{p}</span>
               </Label>
@@ -104,6 +104,7 @@ export default function Checkout() {
         <div className="flex justify-between"><span>Verzending</span><span>{shipping ? eur(shipping) : "Gratis"}</span></div>
         <Separator />
         <div className="flex justify-between text-xl font-semibold"><span>Totaal</span><span>{eur(total)}</span></div>
+        <p className="text-sm text-muted-foreground">Prijzen zijn incl. btw.</p>
         <div className="flex items-start gap-2"><Checkbox id="terms" checked={terms} onCheckedChange={(v) => setTerms(v === true)} className="mt-1" /><Label htmlFor="terms" className="font-normal leading-snug">Ik ga akkoord met de algemene voorwaarden.</Label></div>
         <Button type="submit" size="lg" className="w-full" disabled={!terms}>Bestelling plaatsen</Button>
       </aside>

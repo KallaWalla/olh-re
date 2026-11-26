@@ -6,25 +6,24 @@ import { useCart } from "@/context/cart"
 import ProductArt from "@/components/ProductArt"
 
 const steps = [
-  ["Inzamelen", "Vlaamse kappers bewaren knipsels in plaats van ze weg te gooien. Wij halen ze lokaal op."],
-  ["Spons maken", "Menselijk haar heeft de ideale viltstructuur en neemt tot 8 liter olie op per kilo."],
-  ["Gebruiken", "Eén pak bevat genoeg sponzen voor keuken, garage of huishouden."],
-  ["Terugbrengen", "Verzadigde sponzen en matten gaan in de collection bins bij onze winkelpartners."],
-  ["Zuiveren", "In ons zuiveringscentrum halen we de olie eruit met een milieuvriendelijk solvent. De olie gaat naar herraffinage."],
-  ["Tweede leven", "Schone matten gaan opnieuw aan het werk. Versleten haar wordt compost voor lokale boeren of een Olhère FireBlock."],
+  ["Inzamelen", "Kappers in Vlaanderen verzamelen het haar in een Olhère-box met een plastic zak erin. Wij halen die op."],
+  ["Vilten en snijden", "Het haar wordt gevilt tot matten en daarna gesneden tot sponzen in twee formaten."],
+  ["Opruimen", "Het haar heeft een viltstructuur die tussen 5 en 9 kg olie per kilogram haar opneemt."],
+  ["Aanmaakblokje", "Een gebruikte spons gebruik je als aanmaakblokje voor je haardvuur of barbecue."],
+  ["Vanaf jaar 3", "Inzamelpunten in winkels, zuivering door een extern bedrijf en herraffinage van de olie. Wat niet meer te reinigen is, wordt compost of een Olhère FireBlock."],
 ]
 
 const faq = [
-  ["Wat is een Olhère-spons?", "Een spons van hergebruikt menselijk en dierlijk haar die olie opneemt. Voor kleine olievlekken in keuken, garage en huishouden."],
-  ["Is de spons single-use?", "Eén spons neem je maar één keer vol. Daarom zitten er meerdere in een pak. Daarna breng je hem terug, en krijgt hij een tweede leven."],
-  ["Waar breng ik gebruikte sponzen naartoe?", "Naar de collection bins bij onze retailpartners. Particulieren en bedrijven kunnen er verzadigde sponzen en matten inleveren."],
-  ["Waar kan ik Olhère kopen?", "In deze webshop. We streven naar schapruimte bij twee winkelketens in ons eerste jaar."],
+  ["Wat is een Olhère-spons?", "Een spons van 100% menselijk haar, ethisch ingezameld bij Vlaamse kappers. Hij ruimt kleine tot middelgrote olievlekken op en is een alternatief voor polyester sponzen en papieren doekjes."],
+  ["Welk formaat kies ik?", "Klein voor kleine vlekken in keuken en huishouden, groot voor grotere vlekken in garage of grootkeuken. Beide zijn er per 6 stuks."],
+  ["Wat doe ik met een gebruikte spons?", "Je geeft hem een tweede leven als aanmaakblokje voor je haardvuur of barbecue. Vanaf jaar 3 voorzien we inzamelpunten om sponzen te recycleren."],
+  ["Waar kan ik Olhère kopen?", "In deze webshop, bij lokale bulkwinkels, eco-shops en zelfstandige supermarkten in de regio Gent."],
+  ["Kan ik een review schrijven?", "Ja, op de reviewpagina. Je geeft daarbij toestemming dat we je review publiceren."],
 ]
 
 export default function Home() {
   const { add, setOpen } = useCart()
-  const featured = products.filter((p) => ["spons-6", "mat-50", "starter"].includes(p.id))
-  return (
+    return (
     <>
       <section className="relative overflow-hidden">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-16 md:grid-cols-[1.2fr_1fr] md:py-24">
@@ -54,9 +53,8 @@ export default function Home() {
           <div className="flex aspect-square items-center justify-center rounded-2xl bg-boter"><img src="/box.png" alt="Een pak Olhère-sponzen" className="h-5/6" /></div>
           <div>
             <h2 className="text-5xl leading-none md:text-6xl">Wat we weggooien, kan nog veel opnemen</h2>
-            <p className="mt-6 max-w-prose text-lg leading-relaxed">Bij de kapper wordt al het haar weggegooid en verbrand. Olhère geeft dat haar een tweede bestemming: sponzen en matten die olievlekken efficiënt opkuisen.</p>
-            <p className="mt-4 max-w-prose text-lg leading-relaxed">Onze missie is om haarafval van kappers circulair te verwerken en zo milieuvervuiling door olie en huishoudelijke oliespills op te ruimen.</p>
-          </div>
+            <p className="mt-6 max-w-prose text-lg leading-relaxed">Bij de kapper wordt al het haar weggegooid en verbrand. Olhère geeft dat haar een tweede bestemming: sponzen die olievlekken efficiënt opruimen.</p>
+            <p className="mt-4 max-w-prose text-lg leading-relaxed">Onze missie is om haarafval van kappers circulair te verwerken en zo milieuvervuiling door olie en huishoudelijke oliespills op te ruimen.</p>          </div>
         </div>
       </section>
 
@@ -76,15 +74,19 @@ export default function Home() {
 
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-5">
-          <h2 className="text-5xl leading-none md:text-6xl">Onze eerste twee jaar</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <h2 className="text-5xl leading-none md:text-6xl">Onze eerste drie jaar</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
             <div className="rounded-2xl bg-white p-8">
               <h3 className="text-3xl">Jaar 1</h3>
-              <ul className="mt-4 list-disc space-y-2 pl-5"><li>30 Vlaamse kappers sluiten aan</li><li>Collection bins bij retailpartners</li><li>Schapruimte bij 2 winkelketens</li></ul>
+              <ul className="mt-4 list-disc space-y-2 pl-5"><li>30 Vlaamse kappers sluiten aan</li><li>Schapruimte bij 5 winkelketens</li><li>Verpakking moedigt aan tot een tweede leven als aanmaakblokje</li></ul>
+            </div>
+            <div className="rounded-2xl bg-white p-8">
+              <h3 className="text-3xl">Jaar 2</h3>
+              <ul className="mt-4 list-disc space-y-2 pl-5"><li>60 kapperszaken aangesloten</li><li>Verkoop in meer winkelketens</li></ul>
             </div>
             <div className="rounded-2xl bg-inkt p-8 text-white">
-              <h3 className="text-3xl text-boter">Jaar 2</h3>
-              <ul className="mt-4 list-disc space-y-2 pl-5"><li>60 kapperszaken aangesloten</li><li>Verkoop in meerdere winkelketens</li><li>Tweede-leven lijn: Olhère FireBlocks</li></ul>
+              <h3 className="text-3xl text-boter">Jaar 3</h3>
+              <ul className="mt-4 list-disc space-y-2 pl-5"><li>Inzamelpunten in winkels</li><li>Recyclage: FireBlocks, compost en gerefurbishte sponzen</li></ul>
             </div>
           </div>
         </div>
@@ -98,11 +100,11 @@ export default function Home() {
               Alle producten
             </Button>
           </div>
-          <div className="mt-10 grid gap-8 sm:grid-cols-3">
-            {featured.map((p) => (
+          <div className="mt-10 grid gap-8 sm:grid-cols-2">
+            {products.map((p) => (
               <div key={p.id}>
                 <ProductArt product={p} className="aspect-square rounded-2xl" />
-                <h3 className="mt-4 text-2xl font-semibold">{p.name}</h3>
+                <h3 className="mt-4 text-3xl">{p.name}</h3><p className="mt-1">{p.use}</p>
                 <div className="mt-2 flex items-center justify-between">
                   <span className="text-lg">{eur(p.price)}</span>
                   <Button size="sm" onClick={() => { add(p.id); setOpen(true) }}>In mandje</Button>
@@ -116,7 +118,7 @@ export default function Home() {
       <section id="vragen" className="scroll-mt-16 py-20">
         <div className="mx-auto max-w-3xl px-5">
           <h2 className="text-5xl leading-none md:text-6xl">Veelgestelde vragen</h2>
-          <Accordion className="mt-8 rounded-2xl bg-white px-6">
+          <Accordion type="single" collapsible className="mt-8 rounded-2xl bg-white px-6">
             {faq.map(([q, a]) => (
               <AccordionItem key={q} value={q}>
                 <AccordionTrigger className="text-left text-lg">{q}</AccordionTrigger>

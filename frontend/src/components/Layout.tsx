@@ -47,7 +47,7 @@ function CartSheet() {
           <SheetFooter className="border-t">
             <div className="flex justify-between text-lg"><span>Subtotaal</span><strong>{eur(subtotal)}</strong></div>
             <p className="text-sm text-muted-foreground">Verzending bereken je bij het afrekenen.</p>
-            <Button size="lg" variant="outline" onClick={() => setOpen(false)} nativeButton={false} render={<Link to="/afrekenen" />}>
+            <Button size="lg" onClick={() => setOpen(false)} nativeButton={false} render={<Link to="/afrekenen" />}>
               Afrekenen
             </Button>
           </SheetFooter>
@@ -76,6 +76,7 @@ export default function Layout() {
           </Link>
           <nav className="ml-auto flex items-center gap-6">
             <NavLink to="/shop" className={link}>Shop</NavLink>
+            <NavLink to="/reviews" className={link}>Reviews</NavLink>
             <Link to="/#verhaal" className={`${link} hidden sm:inline`}>Ons verhaal</Link>
             <Link to="/#kringloop" className={`${link} hidden sm:inline`}>Hoe het werkt</Link>
             <Link to="/#vragen" className={`${link} hidden md:inline`}>Vragen</Link>
