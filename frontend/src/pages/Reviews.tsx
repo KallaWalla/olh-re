@@ -77,8 +77,13 @@ export default function Reviews() {
 
       <div className="mt-12 grid gap-12 lg:grid-cols-[1.3fr_1fr]">
         <section aria-label="Alle reviews">
-          <ToggleGroup type="single" value={filter} onValueChange={(v) => v && setFilter(v)} variant="outline" className="bg-white/50">
-            <ToggleGroupItem value="alle" className="px-4 data-[state=on]:bg-inkt data-[state=on]:text-boter">Alle</ToggleGroupItem>
+          <ToggleGroup
+            value={[filter]}
+            onValueChange={(v) => setFilter(v[0] ?? filter)}
+            variant="outline"
+            className="bg-white/50"
+          >
+              <ToggleGroupItem value="alle" className="px-4 data-[state=on]:bg-inkt data-[state=on]:text-boter">Alle</ToggleGroupItem>
             {products.map((p) => (
               <ToggleGroupItem key={p.id} value={p.id} className="px-4 data-[state=on]:bg-inkt data-[state=on]:text-boter">{p.size}</ToggleGroupItem>
             ))}
@@ -104,7 +109,10 @@ export default function Reviews() {
           <div className="space-y-2"><Label htmlFor="r-naam">Naam</Label><Input id="r-naam" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Bijvoorbeeld Marie D." /></div>
           <div className="space-y-2">
             <Label>Product</Label>
-            <Select value={product} onValueChange={setProduct}>
+            <Select
+              value={product}
+              onValueChange={(v) => setProduct(v ?? "algemeen")}
+            >
               <SelectTrigger className="w-full"><SelectValue /></SelectTrigger>
               <SelectContent>
                 <SelectItem value="algemeen">Olhère in het algemeen</SelectItem>
