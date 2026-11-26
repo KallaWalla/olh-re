@@ -118,14 +118,14 @@ export default function Home() {
       <section id="vragen" className="scroll-mt-16 py-20">
         <div className="mx-auto max-w-3xl px-5">
           <h2 className="text-5xl leading-none md:text-6xl">Veelgestelde vragen</h2>
-          <Accordion type="single" collapsible className="mt-8 rounded-2xl bg-white px-6">
-            {faq.map(([q, a]) => (
-              <AccordionItem key={q} value={q}>
-                <AccordionTrigger className="text-left text-lg">{q}</AccordionTrigger>
-                <AccordionContent className="text-base leading-relaxed">{a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+            <Accordion className="mt-8 rounded-2xl bg-white px-6">
+              {faq.map(([q, a]) => (
+                <AccordionItem key={q} value={q}>
+                  <AccordionTrigger className="text-left text-lg">{q}</AccordionTrigger>
+                  <AccordionContent className="text-base leading-relaxed">{a}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
         </div>
       </section>
     </>
